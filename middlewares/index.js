@@ -1,7 +1,7 @@
 const taskValidator = require('./taskValidator');
-const validate = require('./validate');
+const validator = require('./validate');
 
 module.exports = {
     ...taskValidator,
-    validate,
+    ...validator
 };
