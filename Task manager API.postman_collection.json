@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "99f2af81-b793-485e-b282-d110c182cc83",
+		"name": "Task manager API",
+		"description": "The Task Management API provides a comprehensive set of endpoints for managing tasks. Users can perform the following operations:\n\n- **Create a Task**: Create a new task by providing a title and description.\n    \n- **Get All Tasks**: Retrieve a list of all tasks available in the system.\n    \n- **Get a Task by ID**: Retrieve the details of a specific task using its unique ID.\n    \n- **Update a Task**: Modify the details of an existing task, including its title and description.\n    \n- **Delete a Task**: Remove a task from the system by its ID.\n    \n\nThe API is built following RESTful principles, utilizing standard HTTP methods to interact with task resources and returning JSON responses for seamless integration with frontend applications.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17742231",
+		"_collection_link": "https://www.postman.com/abranz/workspace/my-workspace/collection/17742231-99f2af81-b793-485e-b282-d110c182cc83?action=share&source=collection_link&creator=17742231"
+	},
+	"item": [
+		{
+			"name": "Create a task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title\",\r\n    \"description\": \"This is the description of my new task.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/tasks",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tasks"
+					]
+				},
+				"description": "Create a new task by providing a title and description\n\n- **Method:** `POST`\n    \n- **URL:** `http://your-api-url.com/tasks`\n    \n- **Description:** Creates a new task. The `description` field is optional.\n    \n- Response:\n    \n    - **Status 201:** Returns the created task object.\n        \n    - **Status 400:** Returns an error message if the request is invalid."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/tasks",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tasks"
+					]
+				},
+				"description": "Retrieve a list of all tasks available in the system\n\n- **Method:** `GET`\n    \n- **URL:** `http://your-api-url.com/tasks`\n    \n- **Description:** Retrieves a list of all tasks.\n    \n- Response:\n    \n    - **Status 200:** Returns an array of task objects."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/tasks/20",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tasks",
+						"20"
+					]
+				},
+				"description": "Remove a task from the system by its ID\n\n- **Method:** `DELETE`\n    \n- **URL:** `http://your-api-url.com/tasks/{id}`\n    \n- **Description:** Deletes a task by its ID.\n    \n- **Response:**\n    \n    - **Status 204:** Indicates that the task was deleted successfully.\n        \n    - **Status 404:** Returns an error message if the task is not found.\n        \n    - **Example Response:** No content returned for a successful delete"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a task by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/tasks/a",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tasks",
+						"a"
+					]
+				},
+				"description": "Retrieve the details of a specific task using its unique ID\n\n- **Method:** `GET`\n    \n- **URL:** `http://your-api-url.com/tasks/{id}`\n    \n- **Description:** Retrieves a task by its ID.\n    \n- Response:\n    \n    - **Status 200:** Returns the task object.\n        \n    - **Status 404:** Returns an error message if the task is not found."
+			},
+			"response": []
+		},
+		{
+			"name": "Update a task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title\",\r\n    \"description\": \"This is the description of my new task.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/tasks/8",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tasks",
+						"8"
+					]
+				},
+				"description": "Modify the details of an existing task, including its title and description\n\n- **Method:** `PUT`\n    \n- **URL:** `http://your-api-url.com/tasks/{id}`\n    \n- **Description:** Updates an existing task. The `description` field is optional.\n    \n- Response:\n    \n    - **Status 200:** Returns the updated task object.\n        \n    - **Status 400:** Returns an error message if the request is invalid.\n        \n    - **Status 404:** Returns an error message if the task is not found."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "your-api-url",
+			"type": "string"
+		}
+	]
+}
