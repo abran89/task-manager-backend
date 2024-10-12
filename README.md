@@ -12,7 +12,6 @@ A simple task manager application built with Node.js, Express, and MySQL.
 - MySQL
 - Sequelize (ORM)
 - dotenv (for environment variables)
-- [Vitest](https://vitest.dev/) (for testing)
 
 ## Installation
 
@@ -50,15 +49,3 @@ To test the API endpoints, you can use the provided Postman collection.
    - Click on Import and select the downloaded file.
 4. **Set up variables:**
    - {{url}}: Base URL of the server (e.g., http://localhost:3000).
-  
-## Testing
-
-This project uses [Vitest](https://vitest.dev/) for unit testing.
-
-### Running Tests
-
-To run the tests, use the following command:
-
-```bash
-npm run test
-```
