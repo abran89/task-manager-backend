@@ -39,3 +39,13 @@ A simple task manager application built with Node.js, Express, and MySQL.
 - GET /tasks/:id - Retrieve a task by ID
 - PUT /tasks/:id - Update a task by ID
 - DELETE /tasks/:id - Delete a task by ID
+
+# Postman Collection
+To test the API endpoints, you can use the provided Postman collection.
+1. **Download and import the collection:**
+   - [Download Postman Collection](./postman_collection.json)
+3. **Import into Postman:**
+   - Open Postman
+   - Click on Import and select the downloaded file.
+4. **Set up variables:**
+   - {{url}}: Base URL of the server (e.g., http://localhost:3000).
