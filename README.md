@@ -18,7 +18,7 @@ A simple task manager application built with Node.js, Express, and MySQL.
 1. **Clone the repository**
    ```bash
    git clone https://github.com/abran89/task-manager-backend.git
-   cd task-manager
+   cd task-manager-backend
    ```
 2. **Install dependencies**
     ```bash
